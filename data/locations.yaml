@@ -1,0 +1,20 @@
+# Sample list of vending machine locations in Singapore
+locations:
+  - name: Raffles Place MRT (Exit B)
+    area: Raffles Place
+    address: 5 Raffles Place, Singapore 048618
+  - name: One-North Fusionopolis Plaza
+    area: One-North
+    address: 1 Fusionopolis Place, Singapore 138522
+  - name: National University Hospital - Main Lobby
+    area: Queenstown
+    address: 5 Lower Kent Ridge Rd, Singapore 119074
+  - name: Changi Business Park - Atrium
+    area: Tampines
+    address: 1 Changi Business Park Crescent, Singapore 486025
+  - name: NEX Shopping Mall - Level 2
+    area: Serangoon
+    address: 23 Serangoon Central, Singapore 556083
+  - name: Jurong East Interchange - Concourse
+    area: Jurong East
+    address: 10 Jurong East Street 12, Singapore 609690

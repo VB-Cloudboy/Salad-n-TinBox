@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% set title = "Home" %}
+{% block content %}
+<section class="hero">
+  <div class="container hero-inner">
+    <h1 class="hero-title">Chef-made, sealed fresh. Ready when you are.</h1>
+    <p class="hero-sub">Premium salads, hearty bowls, sandwiches, and snacks — from 160+ island-wide vending machines in Singapore.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="/menu.html">Browse Menu</a>
+      <a class="btn btn-secondary" href="/locations.html">Find a Machine</a>
+    </div>
+  </div>
+</section>
+
+<section class="features container">
+  <div class="feature">
+    <div class="feature-icon">🔒</div>
+    <h3>Sealed Airtight</h3>
+    <p>Every item is sealed airtight to lock in freshness and safety until you’re ready.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">👨‍🍳</div>
+    <h3>Chef-prepared Daily</h3>
+    <p>Crafted each morning by our in-house chef team for quality and taste.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">📍</div>
+    <h3>160+ Locations</h3>
+    <p>Find us at offices, campuses, hospitals, and more across Singapore.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-icon">⚡</div>
+    <h3>Ready to Eat</h3>
+    <p>Grab-and-go convenience, without compromising on nutrition.</p>
+  </div>
+</section>
+
+<section class="menu-teaser container">
+  <h2>Popular Picks</h2>
+  <div class="cards">
+    {% for item in popular %}
+    <article class="card">
+      <div class="card-media" style="background-image:url('{{ item.image }}')" aria-label="{{ item.name }}"></div>
+      <div class="card-body">
+        <h3 class="card-title">{{ item.name }}</h3>
+        <p class="card-meta">{{ item.category }} • {{ item.calories }} kcal</p>
+        <p class="card-desc">{{ item.description }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <div class="center">
+    <a class="btn btn-outline" href="/menu.html">See full menu</a>
+  </div>
+</section>
+
+<section class="cta container">
+  <div class="cta-panel">
+    <h2>Healthy meals, always nearby</h2>
+    <p>Our automated kiosks are restocked daily. Scan, select, enjoy.</p>
+    <a class="btn btn-primary" href="/locations.html">Find your nearest machine</a>
+  </div>
+</section>
+{% endblock %}

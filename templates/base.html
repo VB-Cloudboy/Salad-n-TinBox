@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }} • Salad in Tin Box</title>
+  <meta name="description" content="Premium pre-packaged healthy food in Singapore. 160+ vending machines island-wide. Fresh, chef-made salads, bowls, sandwiches, and snacks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script defer src="/assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/index.html" class="brand">
+        <span class="brand-emblem" aria-hidden="true">🥗</span>
+        <span class="brand-text">Salad in Tin Box</span>
+      </a>
+      <button class="nav-toggle" aria-controls="nav" aria-expanded="false">☰</button>
+      <nav id="nav" class="site-nav" aria-label="Primary">
+        <a href="/index.html">Home</a>
+        <a href="/menu.html">Menu</a>
+        <a href="/locations.html">Locations</a>
+        <a href="/about.html">About</a>
+        <a href="/founder.html">Founder</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand-small">Salad in Tin Box</div>
+        <p class="tagline">Ready-to-eat goodness, island-wide — sealed fresh daily.</p>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-title">Explore</div>
+          <ul>
+            <li><a href="/menu.html">Menu</a></li>
+            <li><a href="/locations.html">Find a machine</a></li>
+            <li><a href="/about.html">Our story</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-title">Contact</div>
+          <ul>
+            <li><a href="mailto:hello@saladintin.box">hello@saladintin.box</a></li>
+            <li><a href="/contact.html">Contact form</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">© {{ year }} Salad in Tin Box — Sample site for demonstration purposes. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

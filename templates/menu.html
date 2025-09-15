@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% set title = "Menu" %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <h1>Menu</h1>
+    <p>Balanced, nutritious choices to power your day.</p>
+  </div>
+</section>
+<section class="container">
+  <div class="filters">
+    <input id="menu-search" class="input" placeholder="Search items…" />
+    <div class="chips">
+      <button class="chip" data-filter="All">All</button>
+      {% for cat in categories %}
+      <button class="chip" data-filter="{{ cat }}">{{ cat }}</button>
+      {% endfor %}
+    </div>
+  </div>
+  <div id="menu-grid" class="cards">
+    {% for item in items %}
+    <article class="card" data-category="{{ item.category }}" data-name="{{ item.name | lower }}">
+      <div class="card-media" style="background-image:url('{{ item.image }}')" aria-label="{{ item.name }}"></div>
+      <div class="card-body">
+        <h3 class="card-title">{{ item.name }}</h3>
+        <p class="card-meta">{{ item.category }} • {{ item.calories }} kcal</p>
+        <p class="card-desc">{{ item.description }}</p>
+        <div class="pill-row">
+          {% for tag in item.tags %}
+          <span class="pill">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

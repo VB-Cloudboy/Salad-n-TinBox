@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% set title = "Founder" %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <h1>Founder</h1>
+    <p>Meet the person behind the mission.</p>
+  </div>
+</section>
+<section class="container founder">
+  <div class="founder-card">
+    <div class="founder-media" style="background-image:url('{{ founder.photo }}');" aria-label="{{ founder.name }}"></div>
+    <div class="founder-body">
+      <h2 class="founder-name">{{ founder.name }}</h2>
+      <div class="founder-meta">{{ founder.title }} • {{ founder.location }}</div>
+      <div class="founder-links">
+        {% if founder.linkedin %}
+        <a class="btn btn-small" target="_blank" rel="noopener" href="{{ founder.linkedin }}">LinkedIn</a>
+        {% endif %}
+      </div>
+      <div class="prose">
+        {% for p in founder.bio %}
+        <p>{{ p }}</p>
+        {% endfor %}
+      </div>
+      {% if founder.highlights %}
+      <div class="pill-row" style="margin-top:10px">
+        {% for h in founder.highlights %}
+        <span class="pill">{{ h }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

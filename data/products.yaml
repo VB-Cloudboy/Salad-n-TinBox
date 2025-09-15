@@ -1,0 +1,52 @@
+# Sample product catalog
+categories:
+  - Salads
+  - Hearty Bowls
+  - Sandwiches
+  - Snacks
+
+popular:
+  - name: Mediterranean Chickpea Salad
+    category: Salads
+    calories: 420
+    description: Crunchy veg, chickpeas, olives, feta, lemon herb dressing.
+    image: https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop
+  - name: Teriyaki Chicken Grain Bowl
+    category: Hearty Bowls
+    calories: 560
+    description: Chicken, brown rice, edamame, sesame greens, teriyaki.
+    image: https://images.unsplash.com/photo-1512621776951-6c913df6f6d4?q=80&w=1200&auto=format&fit=crop
+  - name: Avocado Club Sandwich
+    category: Sandwiches
+    calories: 510
+    description: Avocado, tomato, leaf lettuce, roasted turkey, yogurt sauce.
+    image: https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1200&auto=format&fit=crop
+
+items:
+  - name: Kale Caesar with Chicken
+    category: Salads
+    calories: 480
+    tags: [High-Protein]
+    description: Kale, chicken, parmesan, toasted crumbs, creamy dressing.
+    image: https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop
+
+  - name: Rainbow Quinoa Bowl
+    category: Hearty Bowls
+    calories: 520
+    tags: [Vegetarian, High-Fiber]
+    description: Quinoa, roasted veg, hummus, greens, tahini lemon.
+    image: https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=1200&auto=format&fit=crop
+
+  - name: Classic Chicken Sandwich
+    category: Sandwiches
+    calories: 540
+    tags: [High-Protein]
+    description: Roast chicken, lettuce, tomato, house yogurt sauce.
+    image: https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop
+
+  - name: Cocoa Almond Bites
+    category: Snacks
+    calories: 210
+    tags: [Vegan]
+    description: Dates, almonds, cocoa, sea salt — bite-sized energy.
+    image: https://images.unsplash.com/photo-1512427691650-1d7cda83e1e1?q=80&w=1200&auto=format&fit=crop

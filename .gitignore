@@ -1,5 +1,19 @@
-# Object file
-*.o
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
 
-# Ada Library Information
-*.ali
+# Build output
+dist/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Env
+.env
+

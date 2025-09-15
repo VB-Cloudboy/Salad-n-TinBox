@@ -1,0 +1,124 @@
+/* Salad in Tin Box — styles */
+:root{
+  --bg:#0b1112; /* deep slate */
+  --panel:#0f1719;
+  --muted:#7f9c9f;
+  --text:#eaf6f4;
+  --brand:#35d49e; /* leafy green */
+  --accent:#a5f2d8;
+  --card:#0e1416;
+  --ring:#2b675a;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  line-height:1.65; color:var(--text); background:radial-gradient(1200px 600px at 20% -10%,#16302a,transparent),var(--bg);
+}
+.container{width:min(1100px,92%);margin-inline:auto}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,rgba(11,17,18,.9),rgba(11,17,18,.6));backdrop-filter:saturate(1.2) blur(6px); border-bottom:1px solid #112425}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-weight:700}
+.brand-emblem{font-size:20px}
+.brand-text{font-family:"Playfair Display",serif;letter-spacing:.2px;font-size:18px}
+.site-nav{display:flex;gap:16px}
+.site-nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+.site-nav a:hover{color:var(--text);background:#0f1c1a}
+.nav-toggle{display:none}
+@media (max-width:800px){
+  .site-nav{position:absolute;inset:56px 0 auto 0;display:none;flex-direction:column;background:var(--panel);padding:16px 20px;border-bottom:1px solid #102322}
+  .site-nav.open{display:flex}
+  .nav-toggle{display:block;background:transparent;border:1px solid #12302b;color:var(--text);padding:8px 10px;border-radius:8px}
+}
+
+/* Hero */
+.hero{padding:64px 0 40px;background:
+  radial-gradient(800px 300px at 80% 20%, rgba(53,212,158,.15), transparent),
+  linear-gradient(180deg, rgba(53,212,158,.05), rgba(11,17,18,0));
+}
+.hero-title{font-family:"Playfair Display",serif;font-size:42px;line-height:1.2;margin:0 0 10px}
+.hero-sub{color:var(--muted);margin:0 0 20px}
+.hero-cta{display:flex;gap:10px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid #12302b;color:var(--text);text-decoration:none;transition:transform .08s ease;box-shadow:var(--shadow)}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:linear-gradient(180deg, #35d49e, #1ba77a);color:#01281f;border-color:#10765a}
+.btn-primary:hover{filter:brightness(1.03)}
+.btn-secondary{background:linear-gradient(180deg,#102725,#0f1f1d)}
+.btn-outline{background:transparent}
+.btn-small{padding:6px 10px;border-radius:10px}
+
+/* Sections */
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:26px 0}
+.feature{background:var(--panel);border:1px solid #12302b;padding:16px;border-radius:16px}
+.feature-icon{font-size:22px;margin-bottom:6px}
+@media (max-width:900px){.features{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.features{grid-template-columns:1fr}}
+
+.menu-teaser{padding:28px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr); gap:16px}
+.card{background:var(--card);border:1px solid #12302b;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-height:260px}
+.card-media{background:#0a1412 center/cover no-repeat;aspect-ratio:16/9}
+.card-body{padding:14px}
+.card-title{margin:0 0 6px;font-size:18px}
+.card-meta{margin:0 0 8px;color:var(--muted);font-size:14px}
+.card-desc{margin:0;color:#cfe8e2}
+@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+
+.center{display:flex;justify-content:center;margin-top:12px}
+
+/* CTA */
+.cta{padding:30px 0 60px}
+.cta-panel{background:linear-gradient(180deg,#102725,#0f1f1d);border:1px solid #12302b;border-radius:16px;padding:22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.cta-panel h2{margin:0}
+@media (max-width:720px){.cta-panel{flex-direction:column;align-items:flex-start}}
+
+/* Page hero */
+.page-hero{padding:36px 0 10px;border-bottom:1px solid #102322;background:linear-gradient(180deg,rgba(53,212,158,.06),transparent)}
+.page-hero h1{margin:0 0 6px;font-family:"Playfair Display",serif}
+
+/* Forms & inputs */
+.input{width:100%;background:#0d1616;border:1px solid #12302b;border-radius:12px;color:var(--text);padding:10px 12px;outline:0}
+.input:focus{box-shadow:0 0 0 3px #163d33;border-color:#1a7b5f}
+.form{background:var(--panel);border:1px solid #12302b;border-radius:16px;padding:16px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (max-width:700px){.grid-2{grid-template-columns:1fr}}
+
+/* Chips & pills */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:#0f1f1d;color:var(--text);border:1px solid #12302b;border-radius:999px;padding:6px 10px;cursor:pointer}
+.chip.active{background:#143630;border-color:#1a7b5f}
+.pill-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.pill{background:#0f1f1d;border:1px solid #12302b;border-radius:999px;padding:3px 8px;color:#bee9df;font-size:12px}
+
+/* Lists */
+.list{display:flex;flex-direction:column;gap:10px}
+.list-item{display:flex;align-items:center;justify-content:space-between;background:var(--panel);border:1px solid #12302b;border-radius:16px;padding:12px}
+.list-title{font-weight:600}
+.list-meta{color:var(--muted)}
+
+/* Footer */
+.site-footer{border-top:1px solid #102322;background:linear-gradient(180deg,rgba(11,17,18,.6),#0b1112)}
+.footer-inner{padding:22px 0}
+.brand-small{font-weight:700;margin-bottom:4px}
+.footer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:12px 0}
+.footer-title{color:#b2e6da;font-weight:600;margin-bottom:6px}
+.legal{margin-top:8px;color:var(--muted);font-size:14px}
+
+/* Prose */
+.prose h2{font-family:"Playfair Display",serif;margin:18px 0 6px}
+.prose p{margin:0 0 10px;color:#d7efe9}
+
+/* Founder */
+.founder{padding:20px 0 40px}
+.founder-card{display:grid;grid-template-columns:180px 1fr;gap:16px;background:var(--panel);border:1px solid #12302b;border-radius:16px;padding:16px}
+.founder-media{width:100%;aspect-ratio:1/1;border-radius:12px;background:#0a1412 center/cover no-repeat;border:1px solid #12302b}
+.founder-name{margin:0 0 4px}
+.founder-meta{color:var(--muted);margin-bottom:10px}
+.founder-links{display:flex;gap:8px;margin-bottom:10px}
+@media (max-width:640px){.founder-card{grid-template-columns:1fr}}

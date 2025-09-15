@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% set title = "Locations" %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <h1>Find a Machine</h1>
+    <p>160+ machines across Singapore — search by name or area.</p>
+  </div>
+</section>
+<section class="container">
+  <div class="filters">
+    <input id="loc-search" class="input" placeholder="Search locations… (e.g., Raffles, Jurong)" />
+  </div>
+  <div id="locations-list" class="list">
+    {% for loc in locations %}
+    <div class="list-item" data-name="{{ (loc.name + ' ' + loc.area) | lower }}">
+      <div>
+        <div class="list-title">{{ loc.name }}</div>
+        <div class="list-meta">{{ loc.address }} • {{ loc.area }}</div>
+      </div>
+      <a class="btn btn-small" href="https://www.google.com/maps/search/?api=1&query={{ loc.address | urlencode }}" target="_blank" rel="noopener">Map</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
