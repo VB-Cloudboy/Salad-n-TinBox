@@ -9,7 +9,8 @@
 </section>
 <section class="container founder">
   <div class="founder-card">
-    <div class="founder-media" style="background-image:url('{{ founder.photo }}');" aria-label="{{ founder.name }}"></div>
+    {% set photo = founder.photo or '/assets/images/founder.svg' %}
+    <div class="founder-media" style="background-image:url('{{ photo }}');" aria-label="{{ founder.name }}"></div>
     <div class="founder-body">
       <h2 class="founder-name">{{ founder.name }}</h2>
       <div class="founder-meta">{{ founder.title }} • {{ founder.location }}</div>

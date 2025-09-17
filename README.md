@@ -45,5 +45,24 @@ Then open `http://localhost:8080`.
 - Update styles in `assets/css/styles.css`
 - Pages are in `templates/` (`index.html`, `menu.html`, `locations.html`, `about.html`, `contact.html`)
 
+## Add the founder photo
+1) Save your image in `assets/images/` as `founder.jpg` (or `.png`)
+2) Point the YAML to it:
+
+```yaml
+# data/founder.yaml
+photo: /assets/images/founder.jpg
+```
+
+3) Rebuild the site and preview:
+
+```powershell
+python build.py
+python -m http.server --directory dist 8080
+Start-Process http://localhost:8080/founder.html
+```
+
+The template falls back to a placeholder (`/assets/images/founder.svg`) if `photo` is not set.
+
 ## License
 See `LICENSE`.
